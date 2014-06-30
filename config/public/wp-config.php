@@ -19,7 +19,7 @@ $url = parse_url(getenv("DATABASE_URL"));
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define("DB_NAME",  	"dflf3hpjg38j70", "/"));
+define("DB_NAME", "dflf3hpjg38j70", "/");
 // define("DB_NAME", "heroku_4eed1f5663e035f");
 
 /** MySQL database username */
