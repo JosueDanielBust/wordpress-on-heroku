@@ -47,8 +47,8 @@ define("WP_SITEURL", "http://" . $_SERVER["HTTP_HOST"]);
 /** WP_HOME is your Blog Address (URL). */
 // define('WP_HOME', "http://" . $_SERVER["HTTP_HOST"]);
 
-define("FORCE_SSL_LOGIN", getenv("FORCE_SSL_LOGIN") == "true");
-define("FORCE_SSL_ADMIN", getenv("FORCE_SSL_ADMIN") == "true");
+define("FORCE_SSL_LOGIN", getenv("FORCE_SSL_LOGIN") == "false");
+define("FORCE_SSL_ADMIN", getenv("FORCE_SSL_ADMIN") == "false");
 if ($_SERVER["HTTP_X_FORWARDED_PROTO"] == "https")
   $_SERVER["HTTPS"] = "on";
 
