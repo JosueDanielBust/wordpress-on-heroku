@@ -15,7 +15,7 @@
  */
 
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$url = parse_url(getenv("DATABASE_URL"));
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -63,14 +63,14 @@ define("DB_COLLATE", "");
  *
  * @since 2.6.0
  */
-define("AUTH_KEY",         "put your unique phrase here");
-define("SECURE_AUTH_KEY",  "put your unique phrase here");
-define("LOGGED_IN_KEY",    "put your unique phrase here");
-define("NONCE_KEY",        "put your unique phrase here");
-define("AUTH_SALT",        "put your unique phrase here");
-define("SECURE_AUTH_SALT", "put your unique phrase here");
-define("LOGGED_IN_SALT",   "put your unique phrase here");
-define("NONCE_SALT",       "put your unique phrase here");
+define('AUTH_KEY',         '.+l6p+*<mB*^eb? kfz+rA!Nr2~BNU(d`<Z^^/IwV GY=Hn*@]+a&#}XwJHLn<*U');
+define('SECURE_AUTH_KEY',  ')2}@%o0TCN#@pi-^b.ijhpBrtptXclp>^P>|)>CTb+ljt~,h21+~*eW1h=0-5L;<');
+define('LOGGED_IN_KEY',    '.{qB`IW]Y12?g|+-ZH|O8%4~hN.eV0r]y/3;E+YAJ %`K|5:fW_SN@,;Ni]=ER4s');
+define('NONCE_KEY',        'oF2)c7jQ^/fnt~8GB%41mN<xiZ25A&6n:j<d5G27LZ9~uO|M!v^V*yau`,R[c7FN');
+define('AUTH_SALT',        '(%rt]B$;vQWi5;*m-)F+r{s U.;CDhlk*j]`AsStU_n& ykFBw;<+xG{k$WLm[oM');
+define('SECURE_AUTH_SALT', '2dDt+u5d hc,J2x:Z$HT*W(ig1gBg||t/D0$}S&VM1N+Kz59;]FE& u8:kU>$A/8');
+define('LOGGED_IN_SALT',   'h{W(.d8=5kn+=}F!,WWxQ[P.Ulvxum&CtTkT1Tz.#vMwMYu/cQiS;Yb0Te+R&jX}');
+define('NONCE_SALT',       '*3$zD^2lbp)iztvSfm=jqfkL]=5CpJOrkN=tmxT{3ZS(,:8Y- +6I*5.&;m5DtO ');
 
 /**#@-*/
 
