@@ -1,41 +1,40 @@
 <?php
 /**
- * The base configurations of the WordPress.
- *
- * This file has the following configurations: MySQL settings, Table Prefix,
- * Secret Keys, WordPress Language, and ABSPATH. You can find more information
- * by visiting {@link http://codex.wordpress.org/Editing_wp-config.php Editing
- * wp-config.php} Codex page. You can get the MySQL settings from your web host.
- *
- * This file is used by the wp-config.php creation script during the
- * installation. You don't have to use the web site, you can just copy this file
- * to "wp-config.php" and fill in the values.
- *
- * @package WordPress
- */
+* The base configurations of the WordPress.
+*
+* This file has the following configurations: MySQL settings, Table Prefix,
+* Secret Keys, WordPress Language, and ABSPATH. You can find more information
+* by visiting {@link http://codex.wordpress.org/Editing_wp-config.php Editing
+* wp-config.php} Codex page. You can get the MySQL settings from your web host.
+*
+* This file is used by the wp-config.php creation script during the
+* installation. You don't have to use the web site, you can just copy this file
+* to "wp-config.php" and fill in the values.
+*
+* @package WordPress
+*/
 
 
-$url = parse_url(getenv("DATABASE_URL"));
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define("DB_NAME", "dflf3hpjg38j70", "/");
+define("DB_NAME", trim($url["path"], "/"));
 // define("DB_NAME", "heroku_4eed1f5663e035f");
 
 /** MySQL database username */
-define("DB_USER", "khjmoeoxniqdol");
+define("DB_USER", trim($url["user"]));
 // define("DB_USER", "b7cfc877a785ae");
 
 /** MySQL database password */
-define("DB_PASSWORD", "d9NxamVPBhzH0Dw8Souru1x6fd");
+define("DB_PASSWORD", trim($url["pass"]));
 // define("DB_PASSWORD", "db3717c2");
 
 /** MySQL hostname */
-define("DB_HOST", "ec2-23-21-185-168.compute-1.amazonaws.com");
+define("DB_HOST", trim($url["host"]));
 // define("DB_HOST", "us-cdbr-east-03.cleardb.com");
 
-/** MySQL database port  */
-define("DB_PORT", "5432");
+/** MySQL database port */
 // define("DB_PORT", trim($url["port"]));
 
 /** Database Charset to use in creating database tables. */
